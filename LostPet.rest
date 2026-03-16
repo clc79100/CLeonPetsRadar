@@ -1,0 +1,211 @@
+
+
+### 1
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Max",
+  "species": "Perro",
+  "breed": "Labrador",
+  "color": "Dorado",
+  "size": "Grande",
+  "description": "Perro muy amigable, responde al nombre de Max. Llevaba un collar rojo.",
+  "photo_url": "https://example.com/max.jpg",
+  "owner_name": "Juan Pérez",
+  "owner_email": "juan.perez@example.com",
+  "owner_phone": "4771234567",
+  "lat": 21.1278,
+  "lon": -101.6891,
+  "address": "Calle Madero 120, Zona Centro, León, Gto.",
+  "lost_date": "2026-03-14T18:30:00.000Z"
+}
+
+### 2
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Luna",
+  "species": "Gato",
+  "breed": "Siamés",
+  "color": "Blanco con café",
+  "size": "Pequeño",
+  "description": "Gata asustadiza, ojos azules, lleva un cascabel en el collar morado.",
+  "photo_url": "https://example.com/luna.jpg",
+  "owner_name": "María González",
+  "owner_email": "maria.gonzalez@example.com",
+  "owner_phone": "4779876543",
+  "lat": 21.1265,
+  "lon": -101.6823,
+  "address": "Av. López Mateos 45, Col. Centro, León, Gto.",
+  "lost_date": "2026-03-13T09:00:00.000Z"
+}
+
+### 3
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Rocky",
+  "species": "Perro",
+  "breed": "Bulldog Francés",
+  "color": "Atigrado",
+  "size": "Mediano",
+  "description": "Bulldog con oreja izquierda doblada, muy juguetón. Sin collar al momento de perderse.",
+  "photo_url": "https://example.com/rocky.jpg",
+  "owner_name": "Carlos Ramírez",
+  "owner_email": "carlos.ramirez@example.com",
+  "owner_phone": "4771122334",
+  "lat": 21.1231,
+  "lon": -101.6845,
+  "address": "Calle Hidalgo 88, Zona Centro, León, Gto.",
+  "lost_date": "2026-03-15T07:15:00.000Z"
+}
+
+### 4
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Canela",
+  "species": "Perro",
+  "breed": "Salchicha",
+  "color": "Café claro",
+  "size": "Pequeño",
+  "description": "Perrita muy tímida, tiene una mancha blanca en el pecho. Collar azul con placa.",
+  "photo_url": "https://example.com/canela.jpg",
+  "owner_name": "Sofía Torres",
+  "owner_email": "sofia.torres@example.com",
+  "owner_phone": "4774455667",
+  "lat": 21.1293,
+  "lon": -101.6872,
+  "address": "Blvd. Adolfo López Mateos 210, León, Gto.",
+  "lost_date": "2026-03-12T14:45:00.000Z"
+}
+
+### 5
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Milo",
+  "species": "Gato",
+  "breed": "Mestizo",
+  "color": "Naranja con blanco",
+  "size": "Mediano",
+  "description": "Gato castrado, muy sociable y maullador. No tiene collar.",
+  "photo_url": "https://example.com/milo.jpg",
+  "owner_name": "Andrés Flores",
+  "owner_email": "andres.flores@example.com",
+  "owner_phone": "4778899001",
+  "lat": 21.1242,
+  "lon": -101.6905,
+  "address": "Calle Morelos 33, Col. Obregón, León, Gto.",
+  "lost_date": "2026-03-11T21:00:00.000Z"
+}
+
+### 6
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Bella",
+  "species": "Perro",
+  "breed": "Golden Retriever",
+  "color": "Dorado claro",
+  "size": "Grande",
+  "description": "Perra muy cariñosa, lleva chip de identificación. Collar verde con nombre bordado.",
+  "photo_url": "https://example.com/bella.jpg",
+  "owner_name": "Fernanda Ruiz",
+  "owner_email": "fernanda.ruiz@example.com",
+  "owner_phone": "4772233445",
+  "lat": 21.1259,
+  "lon": -101.6835,
+  "address": "Paseo de los Insurgentes 500, León, Gto.",
+  "lost_date": "2026-03-15T11:30:00.000Z"
+}
+
+### 7
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Pipo",
+  "species": "Perro",
+  "breed": "Poodle",
+  "color": "Blanco",
+  "size": "Pequeño",
+  "description": "Poodle con corte de pelo reciente, muy nervioso. Collar rosa con campana.",
+  "photo_url": "https://example.com/pipo.jpg",
+  "owner_name": "Roberto Mendoza",
+  "owner_email": "roberto.mendoza@example.com",
+  "owner_phone": "4776677889",
+  "lat": 21.1218,
+  "lon": -101.6878,
+  "address": "Calle 5 de Mayo 77, Zona Centro, León, Gto.",
+  "lost_date": "2026-03-10T16:00:00.000Z"
+}
+
+### 8
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Sombra",
+  "species": "Perro",
+  "breed": "Pastor Alemán",
+  "color": "Negro con café",
+  "size": "Grande",
+  "description": "Perro adulto, bien entrenado, responde a comandos básicos. Collar negro sin placa.",
+  "photo_url": "https://example.com/sombra.jpg",
+  "owner_name": "Lucía Herrera",
+  "owner_email": "lucia.herrera@example.com",
+  "owner_phone": "4773344556",
+  "lat": 21.1274,
+  "lon": -101.6848,
+  "address": "Calle Juárez 150, Col. Centro, León, Gto.",
+  "lost_date": "2026-03-14T06:45:00.000Z"
+}
+
+### 9
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Nieve",
+  "species": "Conejo",
+  "breed": "Holandés",
+  "color": "Blanco con negro",
+  "size": "Pequeño",
+  "description": "Conejo doméstico muy dócil, orejas negras. Se escapó del jardín trasero.",
+  "photo_url": "https://example.com/nieve.jpg",
+  "owner_name": "Diego Sánchez",
+  "owner_email": "diego.sanchez@example.com",
+  "owner_phone": "4775566778",
+  "lat": 21.1287,
+  "lon": -101.6818,
+  "address": "Calle Independencia 22, León, Gto.",
+  "lost_date": "2026-03-13T17:20:00.000Z"
+}
+
+### 10
+POST http://localhost:3000/api/pets/lost/
+Content-Type: application/json
+
+{
+  "name": "Manchas",
+  "species": "Gato",
+  "breed": "Mestizo",
+  "color": "Blanco con negro",
+  "size": "Mediano",
+  "description": "Gato con mancha negra sobre el ojo derecho, muy curioso. Sin collar.",
+  "photo_url": "https://example.com/manchas.jpg",
+  "owner_name": "Valeria Castro",
+  "owner_email": "valeria.castro@example.com",
+  "owner_phone": "4779900112",
+  "lat": 21.1236,
+  "lon": -101.6862,
+  "address": "Av. Universidad 340, Col. Universitaria, León, Gto.",
+  "lost_date": "2026-03-15T19:10:00.000Z"
+}
