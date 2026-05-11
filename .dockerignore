@@ -1,0 +1,9 @@
+node_modules
+.github
+.git
+.env
+*.md
+*.rest
+requests
+.Dockerfile
+compose.yaml
