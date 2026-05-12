@@ -1,5 +1,6 @@
 FROM node:25-alpine
 
+# Crear carpeta app
 WORKDIR /app
 
 # Copiar el proyecto al contenedor/imagen
