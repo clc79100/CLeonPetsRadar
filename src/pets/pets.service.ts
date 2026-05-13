@@ -144,7 +144,7 @@ export class PetsService {
       logger.info('[PetService] Trayendo todas las mascotas perdidas...');
       const lostPets = await this.foundPetRespository.find();
       logger.info('[PetService] Guardando mascotas perdidas en cache');
-      await this.cachceService.set(CACHE_KEY_ALL_FOUND_PETS, lostPets);
+      await this.cachceService.set(CACHE_KEY_ALL_LOST_PETS, lostPets);
       logger.info(
         `[PetService] Se obtuvieron ${lostPets.length} mascotas perdidas`,
       );
