@@ -1,19 +1,20 @@
 ### 1
-POST http://localhost:3000/api/pets/found/
+
+POST http://localhost:3000/api/pets/found/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "species": "Perro",
+  "address": "Calle Madero 120, Zona Centro, León, Gto.",
   "breed": "Labrador",
   "color": "Dorado",
-  "size": "Grande",
   "description": "Perro encontrado cerca del parque, sin collar, muy amigable y dócil. Parece bien cuidado.",
-  "photo_url": "https://blog.mascotaysalud.com/wp-content/uploads/2019/09/LABRADOR-RETRIEVER-TUMBADO.jpg",
-  "finder_name": "Juan Pérez",
   "finder_email": "juan.perez@example.com",
+  "finder_name": "Juan Pérez",
   "finder_phone": "4771234567",
+  "found_date": "2026-03-15T10:30:00.000Z",
   "lat": 21.1278,
   "lon": -101.6855,
-  "address": "Calle Madero 120, Zona Centro, León, Gto.",
-  "found_date": "2026-03-15T10:30:00.000Z"
+  "photo_url": "https://blog.mascotaysalud.com/wp-content/uploads/2019/09/LABRADOR-RETRIEVER-TUMBADO.jpg",
+  "size": "Grande",
+  "species": "Perro"
 }
