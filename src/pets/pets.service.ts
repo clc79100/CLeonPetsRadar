@@ -24,7 +24,7 @@ export class PetsService {
     @InjectRepository(FoundPet)
     private readonly foundPetRespository: Repository<FoundPet>,
     private readonly emailService: EmailService,
-    private readonly cachceService: CacheService,
+    private readonly cacheService: CacheService,
   ) {}
 
   async createLostPet(lostPet: LostPetDto): Promise<Boolean> {
@@ -48,7 +48,7 @@ export class PetsService {
       },
     });
     await this.lostPetRepository.save(newlostPetEntity);
-    await this.cachceService.delete(CACHE_KEY_ALL_LOST_PETS);
+    await this.cacheService.delete(CACHE_KEY_ALL_LOST_PETS);
     return true;
   }
 
@@ -71,7 +71,7 @@ export class PetsService {
       },
     });
     await this.foundPetRespository.save(newFounPet);
-    await this.cachceService.delete(CACHE_KEY_ALL_FOUND_PETS);
+    await this.cacheService.delete(CACHE_KEY_ALL_FOUND_PETS);
 
     const lostPets = await this.getLostPetsByRadius(
       foundPet.lat,
@@ -95,7 +95,7 @@ export class PetsService {
   ): Promise<LostPet[]> {
     try {
       console.log(
-        `Buscando incidentes en ${lat} ${lon} en un radio de ${radius} mts`,
+        `Buscando Mascotas en ${lat} ${lon} en un radio de ${radius} mts`,
       );
       const lostPets = await this.lostPetRepository
         .createQueryBuilder('lost_pets')
@@ -133,7 +133,7 @@ export class PetsService {
 
   async getLostPets() {
     try {
-      const data = await this.cachceService.get<LostPet[]>(
+      const data = await this.cacheService.get<LostPet[]>(
         CACHE_KEY_ALL_LOST_PETS,
       );
 
@@ -144,13 +144,13 @@ export class PetsService {
       logger.info('[PetService] Trayendo todas las mascotas perdidas...');
       const lostPets = await this.lostPetRepository.find();
       logger.info('[PetService] Guardando mascotas perdidas en cache');
-      await this.cachceService.set(CACHE_KEY_ALL_LOST_PETS, lostPets);
+      await this.cacheService.set(CACHE_KEY_ALL_LOST_PETS, lostPets);
       logger.info(
         `[PetService] Se obtuvieron ${lostPets.length} mascotas perdidas`,
       );
       return lostPets;
     } catch (error) {
-      console.error('[PetService] Error al traer las masctoas perdidas');
+      console.error('[PetService] Error al traer las mascotas perdidas');
       console.error(error);
       return [];
     }
@@ -158,7 +158,7 @@ export class PetsService {
 
   async getFoundPets() {
     try {
-      const data = await this.cachceService.get<FoundPet[]>(
+      const data = await this.cacheService.get<FoundPet[]>(
         CACHE_KEY_ALL_FOUND_PETS,
       );
 
@@ -169,7 +169,7 @@ export class PetsService {
       logger.info('[PetService] Trayendo todas las mascotas encontradas...');
       const foundPets = await this.foundPetRespository.find();
       logger.info('[PetService] Guardando mascotas encontradas en cache');
-      await this.cachceService.set(CACHE_KEY_ALL_FOUND_PETS, foundPets);
+      await this.cacheService.set(CACHE_KEY_ALL_FOUND_PETS, foundPets);
       logger.info(
         `[PetService] Se obtuvieron ${foundPets.length} mascotas encontradas`,
       );
